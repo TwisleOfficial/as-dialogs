@@ -67,7 +67,7 @@ exports('UpdateDialogue', UpdateDialogue)
 function StartCam(coords, rotation)
 	ClearFocus()
 
-	cam = CreateCamWithParams("DEFAULT_SCRIPTED_CAMERA", coords, rotation, GetGameplayCamFov())
+	cam = CreateCamWithParams("DEFAULT_SCRIPTED_CAMERA", coords.xyz, vector3(rotation.x, rotation.y, coords.w), GetGameplayCamFov())
 
 	SetCamActive(cam, true)
 	RenderScriptCams(true, true, 1000, true, false)

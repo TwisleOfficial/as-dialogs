@@ -35,8 +35,8 @@ data = {
                 { "Option3", "event", "event-type" },
                 { "Option4", "", "close" }, -- This option closes the dialog
             },
-            camCoords = vector3(x, y, z),
-            camRotation = vector3(rotX, rotY, rotZ),
+            camCoords = vector4(x, y, z, heading),
+            camRotation = vector2(rotX, rotY),
         }
         exports["as-dialogs"]:DisplayDialog(data)
 ```
@@ -60,8 +60,8 @@ AddEventHandler("rsg-banking:client:Interact", function()
                 { "View Cheques", "event", "client" },
                 { "Leave Conversation", "", "close" },
             },
-            camCoords = vector3(x, y, z),
-            camRotation = vector3(rotX, rotY, rotZ),
+            camCoords = vector4(x, y, z, heading),
+            camRotation = vector2(rotX, rotY),
         }
         exports["as-dialogs"]:DisplayDialog(data)
 end)
@@ -79,8 +79,8 @@ AddEventHandler("rsg-banking:client:Interact", function()
                 { "View Cheques", "event", "client" },
                 { "Leave Conversation", "", "close" },
             },
-            camCoords = vector3(x, y, z),
-            camRotation = vector3(rotX, rotY, rotZ),
+            camCoords = vector4(x, y, z, heading),
+            camRotation = vector2(rotX, rotY),
         }
         exports["as-dialogs"]:DisplayDialog(data)
 end)
@@ -98,8 +98,8 @@ AddEventHandler("rsg-banking:teller", function()
                 { "Bla bla bla", "event", "client" },
                 { "Leave Conversation", "", "close" },
             },
-            camCoords = vector3(x, y, z),
-            camRotation = vector3(rotX, rotY, rotZ),
+            camCoords = vector4(x, y, z, heading),
+            camRotation = vector2(rotX, rotY),
         }
         exports["as-dialogs"]:DisplayDialog(data)
 end)
@@ -134,8 +134,8 @@ AddEventHandler("Interact:Stranger", function()
             { "Tell me more...", "Interact:Stranger2", "update" },
             { "I don't think so buddy.", "", "close" }, -- just closing dialouge
         },
-            camCoords = vector3(x, y, z),
-            camRotation = vector3(rotX, rotY, rotZ),
+            camCoords = vector4(x, y, z, heading),
+            camRotation = vector2(rotX, rotY),
     }
     exports["as-dialogs"]:DisplayDialog(data)
 end)
@@ -154,8 +154,8 @@ AddEventHandler("Interact:Stranger2", function()
             { "How expensive...?", "Interact:Stranger4", "update" }, -- just closing dialouge
             { "No, I'll pass.", "", "close" }, -- just closing dialouge
         },
-            camCoords = vector3(x, y, z),
-            camRotation = vector3(rotX, rotY, rotZ),
+            camCoords = vector4(x, y, z, heading),
+            camRotation = vector2(rotX, rotY),
     }
     exports["as-dialogs"]:DisplayDialog(data2)
 end)
@@ -173,8 +173,8 @@ AddEventHandler("Interact:Stranger3", function()
             { "*hand over map*", "Interact:Stranger3", "update" },
             { "Nevermind actually.", "", "close" },
         },
-            camCoords = vector3(x, y, z),
-            camRotation = vector3(rotX, rotY, rotZ),
+            camCoords = vector4(x, y, z, heading),
+            camRotation = vector2(rotX, rotY),
     }
     exports["as-dialogs"]:DisplayDialog(data2)
 end)
@@ -192,8 +192,8 @@ AddEventHandler("Interact:Stranger4", function()
             { "I'm in.", "Interact:Stranger3", "update" },
             { "I'm out.", "", "close" },
         },
-            camCoords = vector3(x, y, z),
-            camRotation = vector3(rotX, rotY, rotZ),
+            camCoords = vector4(x, y, z, heading),
+            camRotation = vector2(rotX, rotY),
     }
     exports["as-dialogs"]:DisplayDialog(data2)
 end)
